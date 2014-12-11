@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Heiko Seeberger
+ * Copyright 2015 Heiko Seeberger
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,11 +18,17 @@ package de.heikoseeberger
 
 package object reactiveflows {
 
+  // format: OFF
+  private[reactiveflows] val Traversable = scala.collection.immutable.Traversable
   private[reactiveflows] type Traversable[+A] = scala.collection.immutable.Traversable[A]
 
+  private[reactiveflows] val Iterable = scala.collection.immutable.Iterable
   private[reactiveflows] type Iterable[+A] = scala.collection.immutable.Iterable[A]
 
+  private[reactiveflows] val Seq = scala.collection.immutable.Seq
   private[reactiveflows] type Seq[+A] = scala.collection.immutable.Seq[A]
 
+  private[reactiveflows] val IndexedSeq = scala.collection.immutable.IndexedSeq
   private[reactiveflows] type IndexedSeq[+A] = scala.collection.immutable.IndexedSeq[A]
+  // format: ON
 }
