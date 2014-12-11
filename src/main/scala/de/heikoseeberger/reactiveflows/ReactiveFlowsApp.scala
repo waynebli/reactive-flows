@@ -32,6 +32,7 @@ object ReactiveFlowsApp extends {
 
     log.debug("Waiting to become a cluster member ...")
     Cluster(system).registerOnMemberUp {
+      Flows(system).start()
       system.actorOf(Reaper.props, Reaper.Name)
       log.info("App up and running")
     }
