@@ -70,6 +70,6 @@ class Reaper
 
   protected def createHttpService(): ActorRef = {
     import settings.httpService._
-    context.actorOf(HttpService.props(interface, port), HttpService.Name)
+    context.actorOf(HttpService.props(interface, port, askTimeout), HttpService.Name)
   }
 }
