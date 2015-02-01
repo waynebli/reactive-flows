@@ -1,4 +1,7 @@
-lazy val reactiveFlows = project.in(file("."))
+import AssemblyKeys._
+
+lazy val reactiveFlows = project.in(file(".")).
+  settings(assemblySettings: _*)
 
 name := "reactive-flows"
 
